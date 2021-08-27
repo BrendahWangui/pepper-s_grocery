@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+    <script>
+        var stripePublicKey = '<%= stripePublicKey %>'
+    </script>
+    <script defer src="store.js"></script>
+    <title>Pepper's grocery</title>
+</head>
+<body>
+    <div class="navBar">
+        <div class="navBar-1">
+            <h2>Pepper's grocery</h2>
+
+            <div class="searchbar">
+                <input type="text" placeholder="search item">
+                <i class="fa fa-search">search</i>
+            </div>
+
+            <div class="signIn">
+                <i class="fa fa-user"></i>
+                <h4>signIn</h4>
+            </div>
+
+            <div class="return">
+                <p>Returns</p>
+                <h3>& Orders</h3>
+
+            </div>
+
+            <div class="cart">
+                <i class="fa  fa-shopping-cart"="0"></i>
+                <p>Cart</p>
+            </div>
+        </div>
+
+        <div class="navBar-2">
+            <a href="homepage.html">Home</a>
+            <a href="vegetables.html">Vegetables</a>
+            <a href="fruits.html">Fruits</a>
+            <a href="fresh salads + Dips.html">Fresh Salad + Dips</a>
+            <a href="Eggs + Dairy.html">Eggs + Dairy</a>
+            <a href="bakery.html">Bakery</a>
+            <a href="cold drinks.html">Cold Drinks</a>
+        </div>
+    </div>
+
+    <section class="items-body">
+        
+        <div class="backgroundImage">
+            <!-- <img src="./images/gr1.jpg" alt=""> -->
+            <h2 class="items-header">Welcome to Pepper's Grocery</h2>
+        </div>
+        
+        <div class="shop-items"> 
+            <% items.grocery.forEach(function(item){%>
+            <div class="shop-item" data-item-id="<%= item.id %>">
+                <span class="shop-item-title"> <%= item.name %></span>
+                <img class="shop-item-image" src="images/<%= item.imageName %>">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">ksh <%= item.price %></span>
+                    <button class="btn shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <%}) %> 
+            
+        </div>
+    </section>
+    <section class="container content-section">
+        <h2 class="cartHeader">YOUR CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+
+        <div class="cart-items">
+
+        </div>
+
+        <div class="cart-total">
+            <span class="cart-total-title"> Total</span>
+            <span class="cart-total-price">ksh 0</span>
+        </div>
+
+        <button class="btn  btn-purchase">PURCHASE</button>
+
+    </section>
+
+</body>
+</html>

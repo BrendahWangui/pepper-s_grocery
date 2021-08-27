@@ -1,0 +1,53 @@
+{
+  "grocery":[
+        {
+            "id": 1,
+            "name": "Mango",
+            "price": "230",
+            "imageName": "mango.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Broccoli",
+            "price": "180",
+            "imageName": "broccoli.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Eggs",
+            "price": "300",
+            "imageName": "eggs.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Soda",
+            "price": "180",
+            "imageName": "soda.jpeg"
+        },
+        {
+            "id": 5,
+            "name": "Burns",
+            "price": "480",
+            "imageName": "burns.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Mayonnaise",
+            "price": "560",
+            "imageName": "mayonaise.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Chicken salad",
+            "price":"80",
+            "imageName": "chicken salad.jpg"
+        },
+        {
+            "id": 8,
+            "name":"Sauce",
+            "price":"480",
+            "imageName":"sauce.jpg"
+        }
+    ]
+
+}
